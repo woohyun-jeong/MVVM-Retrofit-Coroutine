@@ -8,4 +8,6 @@ class AppRepository {
     suspend fun getPictures() = RetrofitInstance.picsumApi.getPictures()
 
     suspend fun loginUser(body: RequestBodies.LoginBody) = RetrofitInstance.loginApi.loginUser(body)
+
+    suspend fun getImage() = RetrofitInstance.ImageApi.getImage()
 }

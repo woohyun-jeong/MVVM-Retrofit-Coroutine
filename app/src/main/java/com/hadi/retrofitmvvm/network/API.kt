@@ -2,6 +2,7 @@ package com.hadi.retrofitmvvm.network
 
 import com.hadi.retrofitmvvm.model.PicsResponse
 import com.hadi.retrofitmvvm.model.loginResponse.LoginResponse
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -14,4 +15,7 @@ interface API {
 
     @POST("api/login")
     suspend fun loginUser(@Body body:RequestBodies.LoginBody): Response<LoginResponse>
+
+    @GET("cronet/walnut.jpg")
+    suspend fun getImage(): ResponseBody
 }
